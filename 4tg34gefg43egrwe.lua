@@ -49,3 +49,4 @@ syn.queue_on_teleport(
     [[
     loadstring(game:HttpGet("https://raw.githubusercontent.com/NexKacper/Scripts/main/4tg34gefg43egrwe.lua"))()
     ]]
+)
