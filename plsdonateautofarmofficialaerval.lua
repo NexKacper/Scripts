@@ -652,7 +652,7 @@ local function begging()
 	end
 end
 
-local function webhook(raised, donor)
+local function webhook(raised, donator)
 	if getgenv().settings.webhookBox:gsub(' ', '') == '' then
 		return
 	end
@@ -702,8 +702,8 @@ local function webhook(raised, donor)
 				["inline"] = true
 			},
 			{
-				["name"] = "Donor",
-				["value"] = '`' .. tostring(donor) .. '`',
+				["name"] = "Donator",
+				["value"] = '`' .. tostring(donator) .. '`',
 				["inline"] = true
 			},
 			{
