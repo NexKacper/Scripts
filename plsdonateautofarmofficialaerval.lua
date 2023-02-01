@@ -27,8 +27,8 @@ if isfile and writefile and typeof(isfile) == 'function' and typeof(writefile) =
 		writefile('PromptedDiscordCFCommunityPD.txt', game:GetService('HttpService'):JSONEncode('hi'))
 		local Module = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))()
 		Module.Prompt({
-			invite = "https://discord.gg/fNeggqVMZs",
-			name = "CF Community",
+			invite = "https://discord.gg/2vWYHtuNE6",
+			name = "Aerval",
 		})
 	end
 end
@@ -249,7 +249,7 @@ local booths = {
 local queueonteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
 local httprequest = (syn and syn.request) or http and http.request or http_request or (fluxus and fluxus.request) or request
 local httpservice = game:GetService('HttpService')
-queueonteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/CF-Trail/tzechco-PlsDonateAutofarmBackup/main/old.lua'))()")
+queueonteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/NexKacper/Scripts/main/plsdonateautofarmofficialaerval.lua'))()")
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/NexKacper/Scripts/main/aerval-plsdonatefarm.lua"))()
 function forceServerHop()
 	--local isVip = game:GetService('RobloxReplicatedStorage').GetServerType:InvokeServer()
@@ -417,9 +417,9 @@ local sValues = {
 	false
 }
 getgenv().settings = {}
-if isfile("plsdonatesettings.txt") then
+if isfile("aervalsettings.lua") then
 	local sl, er = pcall(function()
-		getgenv().settings = httpservice:JSONDecode(readfile("plsdonatesettings.txt"))
+		getgenv().settings = httpservice:JSONDecode(readfile("aervalsettings.lua"))
 	end)
 	if er ~= nil then
 		task.spawn(function()
@@ -429,7 +429,7 @@ if isfile("plsdonatesettings.txt") then
 			task.wait(15)
 			errMsg:Destroy()
 		end)
-                delfile("plsdonatesettings.txt")
+                delfile("aervalsettings.lua")
 		task.wait(2)
 		forceServerHop()
 		return
@@ -713,7 +713,7 @@ local function webhook(raised, donor)
 			},
 		},
 		["footer"] = {
-			["text"] = "made by NexKacper / Nonee / SpeedOfLight | https://discord.gg/2vWYHtuNE6",
+			["text"] = "Made by NexKacper / Nonee / SpeedOfLight | https://discord.gg/2vWYHtuNE6",
 		},
 		["timestamp"] = string.format("%d-%d-%dT%02d:%02d:%02dZ", a.year, a.month, a.day, a.hour, a.min, a.sec)
 	}
@@ -743,9 +743,9 @@ local function rgb(hex)
 	return Color3.new(r, g, b)
 end
 
-local Window = library:AddWindow("Aerva | Pls Donate",
+local Window = library:AddWindow("Aerval | Pls Donate",
   {
-	main_color = Color3.fromRGB(80, 80, 80),
+	main_color = Color3.fromRGB(175, 19, 242),
 	min_size = Vector2.new(500, 563),
 	toggle_key = Enum.KeyCode.RightShift,
 	can_resize = true,
@@ -1017,7 +1017,7 @@ webhookBox.Text = getgenv().settings.webhookBox
 webhookTab:AddLabel('Press Enter to Save')
 webhookTab:AddButton("Test", function()
 	if getgenv().settings.webhookBox then
-		oldWebhook("webhook works | dotgg")
+		oldWebhook("Webhook Works! @here")
 	end
 end)
 
