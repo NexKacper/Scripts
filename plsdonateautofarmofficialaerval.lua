@@ -442,14 +442,14 @@ if #getgenv().settings ~= sNames then
 			getgenv().settings[v] = sValues[i]
 		end
 	end
-	writefile('plsdonatesettings.txt', httpservice:JSONEncode(getgenv().settings))
+	writefile('aervalsettings.lua', httpservice:JSONEncode(getgenv().settings))
 end
 
 local settingsLock = true
 local function saveSettings()
 	if settingsLock == false then
 		print('Settings saved.')
-		writefile('plsdonatesettings.txt', httpservice:JSONEncode(getgenv().settings))
+		writefile('aervalsettings.txt', httpservice:JSONEncode(getgenv().settings))
 	end
 end
 function serverHop()
